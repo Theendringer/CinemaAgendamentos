@@ -29,7 +29,13 @@ public class Programacao {
     }
     
     public void setFaixaEtaria(int faixaEtaria){
-        this.faixaEtaria = faixaEtaria;
+        if(faixaEtaria.equalsIgnoreCase("L")){
+            this.faixaEtaria = 0;
+            return 0;
+        } else{
+            this.faixaEtaria = StringToInteger(faixaEtaria);
+            return StringToInteger(faixaEtaria);
+        }
     }
     
     public int getFaixaEtaria(){
